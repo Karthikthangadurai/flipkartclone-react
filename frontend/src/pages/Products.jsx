@@ -198,7 +198,7 @@ const Products = () => {
 
     <div className="px-7 py-5 grid grid-cols-2 md:grid-cols-5 items-center text-center cursor-pointer gap-5">
            {filteredLinks.length > 0 ? (filteredLinks.map((link,index) =>( 
-                <div key={index} className="mt-5 p-5 border shadow rounded transition">
+                <div key={index} className="mt-5 p-5 w-[100%] h-[100%] border shadow rounded transition">
                 <img src={link.image} alt="mobile" className="p-2 h-32 mx-auto hover:scale-110 transition"/>
                 <p className="text-xs md:text-base font-serif">{link.name}</p>
                 <p className="text-xs md:text-base font-semibold">{link.amount}</p>
