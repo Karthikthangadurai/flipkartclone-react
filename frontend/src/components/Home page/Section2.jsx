@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaCartShopping } from "react-icons/fa6";
 
 const links =[
     {
@@ -75,10 +74,6 @@ const Section2 = ({ searchTerm }) => {
             <img src={link.image} alt="Photos" className="p-1 md:p-2 w-20 md:w-28 mx-auto h-24 md:h-36 hover:scale-110 transition"/>
             <p className="text-xs md:text-base">{link.name}</p>
             <p className="text-xs md:text-base font-semibold">{link.amount}</p>
-        <div className="mt-1 md:mt-2 flex">
-             <button className="p-1 md:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
-                <button className="ml-1 p-1 md:px-2 md:py-1 text-xs md:text-base font-semibold text-white bg-blue-600 rounded hover:bg-black">Buy Now</button>
-            </div>
         </div>
         ))}
 
