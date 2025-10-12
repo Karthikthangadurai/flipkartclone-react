@@ -38,12 +38,12 @@ const Slidebar = () => {
       </div>
 
       {/* Left Button */}
-      <button onClick={prevSlide} className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+      <button onClick={prevSlide} className="absolute top-1/2 left-4 transform -translate-y-1/2 text-xs md:text-base bg-white/70 hover:bg-white p-1 md:p-2 rounded-full shadow">
         <FaArrowLeft />
       </button>
 
       {/* Right Button */}
-      <button onClick={nextSlide} className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+      <button onClick={nextSlide} className="absolute top-1/2 right-4 transform -translate-y-1/2 text-xs md:text-base bg-white/70 hover:bg-white p-1 md:p-2 rounded-full shadow">
         <FaArrowRight />
       </button>
 
@@ -53,7 +53,7 @@ const Slidebar = () => {
           <div
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
+            className={`w-2 h-1 md:w-3 md:h-3 rounded-full cursor-pointer ${
               current === index ? "bg-blue-500" : "bg-gray-300"
             }`}
           ></div>
