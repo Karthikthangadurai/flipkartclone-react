@@ -196,13 +196,13 @@ const Products = () => {
     <section>
     <div className="sticky top-0"><Header cartCount={cart.length}  onSearchChange={setSearchTerm}/></div>
 
-    <div className="px-7 py-5 grid grid-cols-2 md:grid-cols-6 items-center text-center cursor-pointer gap-5">
+    <div className="px-7 py-5 grid grid-cols-2 md:grid-cols-5 items-center text-center cursor-pointer gap-5">
            {filteredLinks.length > 0 ? (filteredLinks.map((link,index) =>( 
-                <div key={index} className="mt-5 p-5 w-[100%] h-[100%] border shadow rounded transition">
+                <div key={index} className="mt-5 p-5 border shadow rounded transition">
                 <img src={link.image} alt="mobile" className="p-2 h-32 mx-auto hover:scale-110 transition"/>
                 <p className="text-xs md:text-base font-serif">{link.name}</p>
                 <p className="text-xs md:text-base font-semibold">{link.amount}</p>
-                <div className="mt-1 md:mt-2 grid gap-2 items-center w-[95%]">
+                <div className="mt-1 mx-auto flex flex-col gap-2 w-max">
                 <button  onClick={() => handleAddToCart(link)} className="px-2 py-1 md:px-8 text-white text-xs md:text-base font-semibold bg-yellow-400 rounded hover:bg-black flex items-center gap-2"><FaCartShopping/> Add to cart</button>
                 <button className="p-1 md:px-2 md:py-1 text-xs md:text-base font-semibold text-white bg-blue-600 rounded hover:bg-black">Buy Now</button>
                 </div>

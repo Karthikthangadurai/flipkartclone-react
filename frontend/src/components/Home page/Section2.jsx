@@ -69,13 +69,15 @@ const Section2 = ({ searchTerm }) => {
     <div className="mx-4 my-4 border shadow">
         <h1 className="p-3 md:text-2xl font-semibold">Best deals on appliances</h1>
         <div className="px-10 py-5 flex justify-around flex-wrap text-center items-center cursor-pointer gap-5">
-           {filtered.map((link,i) => ( 
+           {filtered.length > 0 ? (filtered.map((link,i) => ( 
         <div key={i} className="text-center">
             <img src={link.image} alt="Photos" className="p-1 md:p-2 w-20 md:w-28 mx-auto h-24 md:h-36 hover:scale-110 transition"/>
             <p className="text-xs md:text-base">{link.name}</p>
             <p className="text-xs md:text-base font-semibold">{link.amount}</p>
         </div>
-        ))}
+        ))
+        ):( <p className="col-span-full text-center text-gray-500 text-lg">No products found 😕</p>
+    )}
 
         </div>
         </div>

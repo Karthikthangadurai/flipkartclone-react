@@ -15,10 +15,10 @@ const Home = () => {
 
   return (
     <div>
-        <Header onSearchChange={(value) => setSearchTerm(value)}/>
+        <Header onSearchChange={(value) => setSearchTerm(value)} />
         <Navbar/>
         <Slidebar/>
-        <Section1 searchTerm={searchTerm}/>
+        <Section1 searchTerm={searchTerm} />
         <Section2 searchTerm={searchTerm} />
         <Section3/>
         <Section4/>

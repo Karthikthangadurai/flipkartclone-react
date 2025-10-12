@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import { FaCartShopping } from "react-icons/fa6";
 
 
@@ -60,26 +61,54 @@ const image =[
 
 const Section1 = ({ searchTerm }) => {
 
+    const [cart, setCart] = useState([]);
+
+     //  Filtering logic
   const filtered = links.filter(l =>
     l.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+    // Load cart from localStorage when component mounts
+    useEffect(() => {
+      const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      setCart(savedCart);
+    }, []);
+  
+    // Save cart to localStorage whenever it changes
+    useEffect(() => {
+      localStorage.setItem("cartItems", JSON.stringify(cart));
+    }, [cart]);
+  
+     //  Add to cart functionality
+   const handleAddToCart = (item) => {
+      const exists = cart.find((p) => p.name === item.name);
+      if (!exists) {
+        const newCart = [...cart, item];
+        setCart(newCart);
+        alert(`${item.name} added to cart`);
+      } else {
+        alert(`${item.name} is already in your cart`);
+      }
+    };
     
   return (
     <section>
     <div className="mx-4 my-4 border shadow">
         <h1 className="p-3 md:text-2xl font-semibold">Best deals on Smartphones</h1>
         <div className="px-10 py-5 flex justify-around flex-wrap text-center items-center cursor-pointer gap-5">
-        {filtered.map((link,i) =>( 
+        {filtered.length > 0 ? (filtered.map((link,i) =>( 
             <div key={i}>
             <img src={link.image} alt="mobile" className="p-2 h-32 mx-auto hover:scale-110 transition"/>
             <p className="text-xs md:text-base">{link.name}</p>
             <p className="text-xs md:text-base font-semibold">{link.amount}</p>
-            <div className="mt-1 md:mt-2 flex">
-            <button className="p-1 md:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
+            <div className="mt-1 mx-auto flex w-max">
+            <button onClick={() => handleAddToCart(link)} className="p-1 md:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
             <button className="ml-1 p-1 md:px-2 md:py-1 text-xs md:text-base font-semibold text-white bg-blue-600 rounded hover:bg-black">Buy Now</button>
             </div>
         </div>
-        ))}
+        ))
+         ):( <p className="col-span-full text-center text-gray-500 text-lg">No products found 😕</p>
+    )}
 
         </div>
         </div>

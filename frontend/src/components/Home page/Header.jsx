@@ -26,14 +26,14 @@ const Header = ({ onSearchChange, cartCount=0 }) => {
          
           <div className="p-1 md:p-2 flex justify-center items-center rounded-md hover:text-white  hover:bg-blue-600 ">
             <p><VscAccount /></p> 
-            <Link to="/Login" className="px-2">Login </Link>
+            <Link to="/Login" className="px-1 md:px-2">Login </Link>
             </div>
 
             <div className="relative p-2 flex justify-center items-center hover:text-blue-700">
             <p><FaCartShopping /></p>
             <Link to="/Cartlist" className="px-1"> Cart</Link>
             {cartCount > 0 && (
-            <p className="absolute top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1.5">
+            <p className="absolute top-1 -right-1 md:-right-2 bg-red-500 text-white text-xs rounded-full px-1 md:px-1.5">
               {cartCount}
             </p>
               )}
