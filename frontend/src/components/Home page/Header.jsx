@@ -11,8 +11,9 @@ const Header = ({ onSearchChange, cartCount=0 }) => {
 
 
   return (
-    <div className= "bg-white sticky top-0 p-4 border border-blue-100 flex justify-between md:justify-around items-center shadow ">
-      <Link to="/"><div>
+    <div className= "bg-white sticky top-0 p-4 border border-blue-100 flex justify-between md:justify-around items-center shadow z-10">
+      <Link to="/">
+      <div>
         <p className="px-6 py-2 md:px-14 md:py-2 md:text-3xl bg-yellow-400 text-white rounded-md cursor-pointer hover:bg-yellow-500"><SiFlipkart /></p>
       </div></Link>
 
@@ -44,7 +45,16 @@ const Header = ({ onSearchChange, cartCount=0 }) => {
             <Link to="/Products" className="px-1">Products</Link>
             </div>
 
-            <p className="hover:bg-slate-200 md:px-3 md:py-1 rounded md:text-2xl hover:text-blue-700">⁝</p>
+            <p onMouseOver={() => document.querySelector('.hidden').classList.toggle('hidden')} className="hover:text-blue-700">More</p>
+        </div>
+        <div className="hidden absolute top-14 right-1 bg-white border border-gray-300 rounded-md shadow-lg p-4 w-48">
+          <ul className="space-y-2">
+            <li className="hover:bg-gray-100 rounded-md p-2 cursor-pointer">Notification Preferences</li>
+            <li className="hover:bg-gray-100 rounded-md p-2 cursor-pointer">Sell on Flipkart</li>
+            <li className="hover:bg-gray-100 rounded-md p-2 cursor-pointer">24x7 Customer Care</li>
+            <li className="hover:bg-gray-100 rounded-md p-2 cursor-pointer">Advertise</li>
+            <li className="hover:bg-gray-100 rounded-md p-2 cursor-pointer">Download App</li>
+          </ul>
         </div>
     </div>
   );

@@ -15,7 +15,7 @@ const Login = () => {
   return (
     <section className="flex flex-col">
 
-          <div className="sticky top-0">
+          <div className="sticky top-0 z-10">
           <Header/>
           </div>
 

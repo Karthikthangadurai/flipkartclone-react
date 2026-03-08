@@ -194,7 +194,7 @@ const Products = () => {
 
   return (
     <section>
-    <div className="sticky top-0"><Header cartCount={cart.length}  onSearchChange={setSearchTerm}/></div>
+    <div className="sticky top-0 z-10"><Header cartCount={cart.length}  onSearchChange={setSearchTerm}/></div>
 
     <div className="px-7 py-5 grid grid-cols-2 md:grid-cols-5 items-center text-center cursor-pointer gap-5">
            {filteredLinks.length > 0 ? (filteredLinks.map((link,index) =>( 
