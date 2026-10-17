@@ -51,11 +51,13 @@ const Navbar = () => {
   return (
 
     <div className="hidden md:block">
-    <div className="mx-4 my-2 px-20 py-5 bg-white border shadow flex justify-around flex-wrap">
+    <div className="mx-4 my-2 p-5 bg-white border shadow rounded flex justify-evenly items-center flex-wrap">
       {Navlinks.map((link,i) => (
-        <div key={i} className="cursor-pointer font-semibold flex flex-col items-center text-center">
-        <div><img src={link.image} alt="photo"  className="hover:scale-110 transition"/></div>
-        <div><a href="#" >{link.name}</a></div>
+        <div key={i} className="cursor-pointer font-semibold text-center">
+        <a href="#">
+        <img src={link.image} alt="photo"  className="hover:scale-110 transition mx-auto w-[75px]"/>
+        <span className='text-blue-950'>{link.name}</span>
+        </a>
         </div>
   ))}
     </div>

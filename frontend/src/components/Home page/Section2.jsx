@@ -71,7 +71,7 @@ const Section2 = ({ searchTerm }) => {
         <div className="px-10 py-5 flex justify-around flex-wrap text-center items-center cursor-pointer gap-5">
            {filtered.length > 0 ? (filtered.map((link,i) => ( 
         <div key={i} className="text-center">
-            <img src={link.image} alt="Photos" className="p-1 md:p-2 w-20 md:w-28 mx-auto h-24 md:h-36 hover:scale-110 transition"/>
+            <img src={link.image} alt="Photos" className="p-1 mx-auto w-[100px] h-[170px] hover:scale-110 transition"/>
             <p className="text-xs md:text-base">{link.name}</p>
             <p className="text-xs md:text-base font-semibold">{link.amount}</p>
         </div>

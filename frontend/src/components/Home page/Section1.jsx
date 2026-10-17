@@ -95,12 +95,12 @@ const Section1 = ({ searchTerm }) => {
     <section>
     <div className="mx-4 my-4 border shadow">
         <h1 className="p-3 md:text-2xl font-semibold">Best deals on Smartphones</h1>
-        <div className="px-10 py-5 flex justify-around flex-wrap text-center items-center cursor-pointer gap-5">
+        <div className="mx-auto w-[100%] px-6 pb-10 flex justify-around items-center flex-wrap cursor-pointer gap-8">
         {filtered.length > 0 ? (filtered.map((link,i) =>( 
-            <div key={i}>
-            <img src={link.image} alt="mobile" className="p-2 h-32 mx-auto hover:scale-110 transition"/>
-            <p className="text-xs md:text-base">{link.name}</p>
-            <p className="text-xs md:text-base font-semibold">{link.amount}</p>
+            <div key={i} className=''>
+            <img src={link.image} alt="mobile" className="p-2 mx-auto w-32 h-36 hover:scale-110 transition"/>
+            <p className="text-sm md:text-base text-center">{link.name}</p>
+            <p className="text-sm md:text-base font-semibold text-center">{link.amount}</p>
             <div className="mt-1 mx-auto flex w-max">
             <button onClick={() => handleAddToCart(link)} className="p-1 md:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
             <button className="ml-1 p-1 md:px-2 md:py-1 text-xs md:text-base font-semibold text-white bg-blue-600 rounded hover:bg-black">Buy Now</button>
