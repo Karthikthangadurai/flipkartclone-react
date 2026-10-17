@@ -14,7 +14,7 @@ const Header = ({ onSearchChange, cartCount=0 }) => {
     <div className= "bg-transparent backdrop-blur-md sticky top-0 p-4 border border-blue-100 flex justify-around items-center shadow z-10">
       <Link to="/">
       <div>
-        <img src="/public/image.png" alt="flipkart icon" className='w-8 sm:w-10 md:w-12' />
+        <img src="./public/image.png" alt="flipkart icon" className='w-8 sm:w-10 md:w-12' />
       </div></Link>
 
   <div className="relative px-1 mx-auto w-[60%] hidden md:block items-center cursor-pointer">
