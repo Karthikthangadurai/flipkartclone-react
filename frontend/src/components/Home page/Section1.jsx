@@ -95,14 +95,14 @@ const Section1 = ({ searchTerm }) => {
     <section>
     <div className="mx-4 my-4 border shadow">
         <h1 className="p-3 md:text-2xl font-semibold">Best deals on Smartphones</h1>
-        <div className="mx-auto w-[100%] px-6 pb-10 flex justify-around items-center flex-wrap cursor-pointer gap-8">
+        <div className="mx-auto w-[97%] pb-10 flex justify-around items-center flex-wrap cursor-pointer gap-5">
         {filtered.length > 0 ? (filtered.map((link,i) =>( 
-            <div key={i} className=''>
-            <img src={link.image} alt="mobile" className="p-2 mx-auto w-32 h-36 hover:scale-110 transition"/>
-            <p className="text-sm md:text-base text-center">{link.name}</p>
-            <p className="text-sm md:text-base font-semibold text-center">{link.amount}</p>
+            <div key={i} className='mx-auto p-2 basis-10 grow w-[200px] h-[230px] sm:w-full sm:h-full'>
+            <img src={link.image} alt="mobile" className="p-2 mx-auto w-28 h-32 hover:scale-110 transition"/>
+            <p className="text-xs sm:text-sm text-center">{link.name}</p>
+            <p className=" my-1 text-xs sm:text-sm font-semibold text-center">{link.amount}</p>
             <div className="mt-1 mx-auto flex w-max">
-            <button onClick={() => handleAddToCart(link)} className="p-1 md:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
+            <button onClick={() => handleAddToCart(link)} className="px-2 lg:px-4 text-white bg-yellow-400 rounded hover:bg-black "><FaCartShopping/></button>
             <button className="ml-1 p-1 md:px-2 md:py-1 text-xs md:text-base font-semibold text-white bg-blue-600 rounded hover:bg-black">Buy Now</button>
             </div>
         </div>
