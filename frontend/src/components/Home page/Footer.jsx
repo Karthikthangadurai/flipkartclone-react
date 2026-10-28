@@ -64,7 +64,7 @@ const Footer = () => {
             <a href='#' className="cursor-pointer hidden md:block">🌠 Advertise</a>
             <a href='#' className="cursor-pointer hidden md:block">🎁 Gift Cards</a>
             <a href='#' className="cursor-pointer hidden md:block">☎️ Help Center</a>
-            <a href='#' className="cursor-pointer">&copy; 2025 Flipkart.com Made with ❤️TeamMates</a>
+            <a href='#' className="cursor-pointer">&copy; 2026 Flipkart.com Made with ❤️Team</a>
         </div>
 
 
